@@ -32,8 +32,8 @@ class SideBar extends Component {
             </Menu.Item>
             <Menu.Item key="4">
               <Icon type="schedule" />
-              <span>Scheduling</span>
-              <Link to="/attendance/" />
+              <span>Input Feedback</span>
+              <Link to="/Feedback/" />
             </Menu.Item>
             <Menu.Item key="5">
               <Icon type="schedule" />

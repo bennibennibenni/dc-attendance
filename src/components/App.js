@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 
+import Feedback from './Feedback';
 import SideBar from './SideBar';
 import Header from './Header';
 import Students from './Students';
@@ -32,6 +33,7 @@ class App extends Component {
               <Route exact path="/attendance" component={Overview} />
               <Route exact path="/attendance/individual" component={Individual} />
 
+              <Route exact path="/feedback" component={Feedback} />
               <Route exact path="/home" component={Home} />
               <Route exact path="/calender" component={ViewCalender} />
               <Route exact path="/students" component={Students} />

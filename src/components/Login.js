@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Form, Icon, Input, Button } from "antd";
-
 import "antd/dist/antd.css";
 
 class Login extends React.Component {
@@ -19,6 +17,7 @@ class Login extends React.Component {
     return (
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
+          Only Head Division of Dhamma and Social can Login !!!
           {getFieldDecorator("username", {
             rules: [{ required: true, message: "Please input your username!" }]
           })(
@@ -45,7 +44,7 @@ class Login extends React.Component {
             htmlType="submit"
             className="login-form-button"
           >
-            Log in
+            Login
           </Button>
         </Form.Item>
       </Form>
