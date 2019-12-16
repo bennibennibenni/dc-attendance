@@ -25,22 +25,32 @@ class SideBar extends Component {
             <Link to="/"></Link>
           </div>
           <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-            <Menu.Item key="3">
+          <Menu.Item key="8">
+              <Icon type="schedule" />
+              <span>Edit Information</span>
+              <Link to="/edit-information/" />
+            </Menu.Item>
+            <Menu.Item key="7">
               <Icon type="schedule" />
               <span>Summary</span>
               <Link to="/attendance/" />
             </Menu.Item>
-            <Menu.Item key="4">
+            <Menu.Item key="6">
               <Icon type="schedule" />
-              <span>Input Feedback</span>
-              <Link to="/Feedback/" />
+              <span>Attendance Detail</span>
+              <Link to="/attendance-detail/" />
             </Menu.Item>
             <Menu.Item key="5">
               <Icon type="schedule" />
-              <span>Home</span>
-              <Link to="/Home/" />
+              <span>Input Feedback</span>
+              <Link to="/feedback/" />
             </Menu.Item>
-            <Menu.Item key="1">
+            <Menu.Item key="4">
+              <Icon type="schedule" />
+              <span>Home</span>
+              <Link to="/home/" />
+            </Menu.Item>
+            <Menu.Item key="3">
               <Icon type="user" />
               <span>Students</span>
               <Link to="/students" />
@@ -50,7 +60,7 @@ class SideBar extends Component {
               <span>Calender</span>
               <Link to="/calender/" />
             </Menu.Item>
-            <Menu.Item key="6">
+            <Menu.Item key="1">
               <Icon type="login" />
               <span>Login / Logout</span>
               <Link to="/login/" />

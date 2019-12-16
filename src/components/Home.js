@@ -44,10 +44,10 @@ const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
                 ]
               })(<Input type="textarea" />)}
             </Form.Item>
-            <Form.Item label="Position">
+            <Form.Item label="Role">
               {getFieldDecorator("gender", {
                 rules: [
-                  { required: true, message: "Please select your position!" }
+                  { required: true, message: "Please select your Role!" }
                 ]
               })(
                 <Select onChange={this.handleSelectChange}>
@@ -133,32 +133,27 @@ class Home extends React.Component {
     return (
       <div>
         <Form layout={formLayout}>
-          <Form.Item {...formItemLayout}>
-            <Radio.Group
-              defaultValue="vertical"
-              onChange={this.handleFormLayoutChange}
-            ></Radio.Group>
-          </Form.Item>
+          <Form.Item {...formItemLayout}></Form.Item>
 
           <Clock
             format={"dddd, MMMM Mo, YYYY, h:mm:ss A"}
             timezone={"Asia/Jakarta"}
           />
-          <Form.Item label="Input your NIM" {...formItemLayout}>
+          <Form.Item>
+            Input your NIM
             <Input placeholder="2001558126" />
           </Form.Item>
-          <Form.Item {...buttonItemLayout}>
-            <Button type="primary">Submit</Button>
-            <StyledButton type="primary" onClick={this.showModal}>
-              Register
-            </StyledButton>
-            <CollectionCreateForm
-              wrappedComponentRef={this.saveFormRef}
-              visible={this.state.visible}
-              onCancel={this.handleCancel}
-              onCreate={this.handleCreate}
-            />
-          </Form.Item>
+
+          <Button type="primary">Submit</Button>
+          <StyledButton type="primary" onClick={this.showModal}>
+            Register
+          </StyledButton>
+          <CollectionCreateForm
+            wrappedComponentRef={this.saveFormRef}
+            visible={this.state.visible}
+            onCancel={this.handleCancel}
+            onCreate={this.handleCreate}
+          />
         </Form>
       </div>
     );

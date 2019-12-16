@@ -10,6 +10,8 @@ import Students from './Students';
 import Login from './Login';
 import Home from './Home';
 import ViewCalender from './ViewCalender';
+import AttendanceDetail from './AttendanceDetail';
+import EditInformation from './EditInformation';
 import { Overview, Individual } from './Attendance';
 
 const Dashboard = () => <div>Dashboard</div>;
@@ -33,8 +35,10 @@ class App extends Component {
               <Route exact path="/attendance" component={Overview} />
               <Route exact path="/attendance/individual" component={Individual} />
 
+              <Route exact path="/edit-information" component={EditInformation} />
               <Route exact path="/feedback" component={Feedback} />
               <Route exact path="/home" component={Home} />
+              <Route exact path="/attendance-detail" component={AttendanceDetail} />
               <Route exact path="/calender" component={ViewCalender} />
               <Route exact path="/students" component={Students} />
               <Route exact path="/login" component={Login} />
