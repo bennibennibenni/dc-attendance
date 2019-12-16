@@ -6,7 +6,7 @@ import "antd/dist/antd.css";
 const { TextArea } = Input;
 
 const StyledButton = styled(Button)`
- margin-top: 20px;
+ margin-top: 24px;
 `;
 
 class Feedback extends React.Component {

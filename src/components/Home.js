@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Button, Modal, Form, Input, Radio } from "antd";
+import Clock from "react-live-clock";
+import { Button, Modal, Form, Input, Radio, Select } from "antd";
 import "antd/dist/antd.css";
 
-const StyledButton = styled(Button)`
- margin-left: 20px;
-`;
+const { Option } = Select;
 
+const StyledButton = styled(Button)`
+  margin-left: 20px;
+`;
 
 const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
   class extends React.Component {
@@ -43,14 +45,18 @@ const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
               })(<Input type="textarea" />)}
             </Form.Item>
             <Form.Item label="Position">
-              {getFieldDecorator("title", {
+              {getFieldDecorator("gender", {
                 rules: [
-                  {
-                    required: true,
-                    message: "Please input your position!"
-                  }
+                  { required: true, message: "Please select your position!" }
                 ]
-              })(<Input type="textarea" />)}
+              })(
+                <Select onChange={this.handleSelectChange}>
+                  <Option value="kobid1">Koordinator Bidang 1</Option>
+                  <Option value="kobid2">Koordinator Bidang 2</Option>
+                  <Option value="kobid3">Koordinator Bidang 3</Option>
+                  <Option value="kobid4">Koordinator Bidang 4</Option>
+                </Select>
+              )}
             </Form.Item>
             <Form.Item label="Major">
               {getFieldDecorator("title", {
@@ -134,6 +140,10 @@ class Home extends React.Component {
             ></Radio.Group>
           </Form.Item>
 
+          <Clock
+            format={"dddd, MMMM Mo, YYYY, h:mm:ss A"}
+            timezone={"Asia/Jakarta"}
+          />
           <Form.Item label="Input your NIM" {...formItemLayout}>
             <Input placeholder="2001558126" />
           </Form.Item>

@@ -37,7 +37,10 @@ class Students extends Component {
           columns={[
             { title: 'Name', dataIndex: 'name', key: 'name' },
             { title: 'NIM', dataIndex: 'nim', key: 'nim' },
-            { title: 'Position', dataIndex: 'jabatan', key: 'jabatan' }
+            { title: 'Position', dataIndex: 'jabatan', key: 'jabatan' },
+            { title: '', dataIndex: 'jabatan', key: 'detail' },
+            { title: '', dataIndex: 'jabatan', key: 'edit' },
+            { title: '', dataIndex: 'jabatan', key: 'delete' },
           ]}
           dataSource={data}
           onChange={this.handleChange}
