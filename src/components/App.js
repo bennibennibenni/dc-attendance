@@ -12,7 +12,7 @@ import Home from './Home';
 import ViewCalender from './ViewCalender';
 import AttendanceDetail from './AttendanceDetail';
 import EditInformation from './EditInformation';
-import { Overview, Individual } from './Attendance';
+import TotalStudent from './TotalStudent';
 
 const Dashboard = () => <div>Dashboard</div>;
 
@@ -32,8 +32,7 @@ class App extends Component {
                 minHeight: '100vh'
               }}>
               <Route exact path="/" component={Dashboard} />
-              <Route exact path="/attendance" component={Overview} />
-              <Route exact path="/attendance/individual" component={Individual} />
+              <Route exact path="/total-Student" component={TotalStudent} />
 
               <Route exact path="/edit-information" component={EditInformation} />
               <Route exact path="/feedback" component={Feedback} />
