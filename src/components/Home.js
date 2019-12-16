@@ -1,9 +1,14 @@
 import React from "react";
+import styled from "styled-components";
 import { Button, Modal, Form, Input, Radio } from "antd";
 import "antd/dist/antd.css";
 
+const StyledButton = styled(Button)`
+ margin-left: 20px;
+`;
+
+
 const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
-  // eslint-disable-next-line
   class extends React.Component {
     render() {
       const { visible, onCancel, onCreate, form } = this.props;
@@ -134,9 +139,9 @@ class Home extends React.Component {
           </Form.Item>
           <Form.Item {...buttonItemLayout}>
             <Button type="primary">Submit</Button>
-            <Button type="primary" onClick={this.showModal}>
+            <StyledButton type="primary" onClick={this.showModal}>
               Register
-            </Button>
+            </StyledButton>
             <CollectionCreateForm
               wrappedComponentRef={this.saveFormRef}
               visible={this.state.visible}
