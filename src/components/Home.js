@@ -25,7 +25,7 @@ const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
         >
           <Form layout="vertical">
             <Form.Item label="NIM">
-              {getFieldDecorator("title", {
+              {getFieldDecorator("nim", {
                 rules: [
                   {
                     required: true,
@@ -35,7 +35,7 @@ const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
               })(<Input />)}
             </Form.Item>
             <Form.Item label="Name">
-              {getFieldDecorator("title", {
+              {getFieldDecorator("name", {
                 rules: [
                   {
                     required: true,
@@ -45,10 +45,8 @@ const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
               })(<Input type="textarea" />)}
             </Form.Item>
             <Form.Item label="Role">
-              {getFieldDecorator("gender", {
-                rules: [
-                  { required: true, message: "Please select your Role!" }
-                ]
+              {getFieldDecorator("role", {
+                rules: [{ required: true, message: "Please select your Role!" }]
               })(
                 <Select onChange={this.handleSelectChange}>
                   <Option value="kobid1">Koordinator Bidang 1</Option>
@@ -59,7 +57,7 @@ const CollectionCreateForm = Form.create({ name: "form_in_modal" })(
               )}
             </Form.Item>
             <Form.Item label="Major">
-              {getFieldDecorator("title", {
+              {getFieldDecorator("major", {
                 rules: [
                   {
                     required: true,
